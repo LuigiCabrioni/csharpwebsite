@@ -1,0 +1,22 @@
+@page
+@model PicklesPageModel
+
+<h1 style="text-align: center">View Broccoli and Pickles!</h1>
+
+<table class="table">
+    <tr style="color: #fff">
+        <td>Name</td>
+        <td>Price</td>
+        
+    </tr>
+    @foreach (var broccolis in Model.broccolis.broccolis)
+    {
+    <tr>
+        <td>@broccolis.Name</td>
+        <td>@broccolis.Price</td>
+        <td>
+            <button type="button" class="btn btn-primary">Order</button>
+        </td>
+    </tr>
+    }
+</table>
